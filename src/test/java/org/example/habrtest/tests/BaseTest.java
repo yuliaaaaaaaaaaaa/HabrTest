@@ -14,7 +14,6 @@ public class BaseTest {
         Configuration.pageLoadStrategy = "eager";
     }
 
-
     @AfterEach
     public void tearDown() {
     }

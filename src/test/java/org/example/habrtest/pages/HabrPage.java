@@ -10,11 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
-
 public class HabrPage {
 
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(HabrPage.class));
-
 
     private static final By FEED_ELEMENT = By.xpath("//*[@href='/ru/feed/']");
     private static final By ARTICLES_ELEMENT = By.xpath("//*[@href='/ru/articles/']");

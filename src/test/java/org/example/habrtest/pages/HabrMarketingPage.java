@@ -10,7 +10,6 @@ public class HabrMarketingPage {
 
     private final AllureLogger LOG = new AllureLogger(LoggerFactory.getLogger(HabrPage.class));
 
-
     private static final By MARKETING_ARTICLES_ELEMENT = By.xpath("//span/a[@href='/ru/flows/marketing/']");
     private static final By POSTS_ELEMENT = By.xpath("//span/a[@href='/ru/flows/marketing/posts/']");
     private static final By NEWS_ELEMENT = By.xpath("//span/a[@href='/ru/flows/marketing/news/']");

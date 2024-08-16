@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
 public class HabrMarketingTest extends BaseTest {
 
     private HabrPage HabrPage;
