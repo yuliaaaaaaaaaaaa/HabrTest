@@ -1,18 +1,18 @@
 package org.example.habrtest.tests;
 
 import io.qameta.allure.Step;
-import org.example.habrtest.MyExtension;
 import org.example.habrtest.pages.HabrMarketingPage;
 import org.example.habrtest.pages.HabrPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@ExtendWith(MyExtension.class)
+
 public class HabrMarketingTest extends BaseTest {
 
     private HabrPage HabrPage;
@@ -23,14 +23,14 @@ public class HabrMarketingTest extends BaseTest {
     @Step("Переход на сайт habr")
     public void setUp() {
         super.setUp();
-        getDriver().get("https://www.habr.com/");
-        HabrPage = new HabrPage(getDriver());
-        HabrMarketingPage = new HabrMarketingPage(getDriver());
+        open("https://www.habr.com/");
+        HabrPage = new HabrPage();
+        HabrMarketingPage = new HabrMarketingPage();
     }
 
     @AfterEach
     public void tearDown() {
-        super.tearDown();
+        closeWebDriver();
     }
 
     @Test
